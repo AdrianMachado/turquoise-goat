@@ -20,10 +20,37 @@
             "options": {}
           },
           "policies": {
-            "inbound": []
+            "inbound": [
+              "custom-code-inbound",
+              "custom-code-inbound-1"
+            ]
           }
         },
         "operationId": "1dae6e94-6bcf-4b1e-a12e-b24e4f892d0c"
+      }
+    },
+    "/path-1": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "Exact copy",
+        "description": "Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do `eiusmod tempor` incididunt ut labore et dolore magna aliqua.",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "handler",
+            "module": "$import(./modules/context-data)",
+            "options": {}
+          },
+          "policies": {
+            "inbound": [
+              "context-data-policy-1",
+              "context-data-policy-2"
+            ]
+          }
+        },
+        "operationId": "c60dd6b4-b252-4113-9ab6-b7d8f214a1ef"
       }
     }
   }

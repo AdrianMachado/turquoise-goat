@@ -1,9 +1,7 @@
 import { ContextData, ZuploContext, ZuploRequest } from "@zuplo/runtime";
 
 export default async function (request: ZuploRequest, context: ZuploContext) {
-  ContextData.set(context, "foo", "bar");
-  const foo = ContextData.get(context, "foo");
-
-  context.log.error(`Foo is ${foo}`);
-  return "What zup?";
+  const data = ContextData.get(context, "my-data");
+  context.log.error(`Data ${data}`);
+  return data;
 }

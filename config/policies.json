@@ -1,3 +1,38 @@
 {
-  "policies": []
+  "policies": [
+    {
+      "handler": {
+        "export": "default",
+        "module": "$import(./modules/context-test)",
+        "options": {}
+      },
+      "name": "custom-code-inbound",
+      "policyType": "custom-code-inbound"
+    },
+    {
+      "handler": {
+        "export": "default",
+        "module": "$import(./modules/another-context-test)",
+        "options": {}
+      },
+      "name": "custom-code-inbound-1",
+      "policyType": "custom-code-inbound"
+    },
+    {
+      "handler": {
+        "export": "policy1",
+        "module": "$import(./modules/context-data)"
+      },
+      "name": "context-data-policy-1",
+      "policyType": "custom-code-inbound"
+    },
+    {
+      "handler": {
+        "export": "policy2",
+        "module": "$import(./modules/context-data)"
+      },
+      "name": "context-data-policy-2",
+      "policyType": "custom-code-inbound"
+    }
+  ]
 }

@@ -4,6 +4,6 @@ export default async function (request: ZuploRequest, context: ZuploContext) {
   ContextData.set(context, "foo", "bar");
   const foo = ContextData.get(context, "foo");
 
-  context.log.info(`Foo is ${foo}`);
+  context.log.error(`Foo is ${foo}`);
   return "What zup?";
 }
